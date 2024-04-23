@@ -364,6 +364,7 @@ button {
 .car__view-canvas {
   width: 100%;
   height: inherit;
+  border: none;
 }
 .car__info {
   position: absolute;
