@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/plugins/swiper.min.css">
+</head>
+
+<body>
+  <div class="view">
+    <header class="header">
+      <div class="header__wrap">
+        <a href="#" class="header__logo">
+          <h1>LOGO</h1>
+        </a>
+        <button id="header__menu-btn"><i class="ri-menu-2-line"></i></button>
+      </div>
+      <div class="header__gnb"></div>
+    </header>
+    <section class="visual">
+      <div id="visualSwiper" class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="container">
+              <p class="swiper-slide-title">Renault<br><span class="ko">한국에서 만나다<span></p>
+              <p class="swiper-slide-desc">세계 1위 프랑스 자동차 브랜드 <span>(2023년 판매량 기준)</span></p>
+              <a href="#" class="swiper-slide-link btn light">더 알아보기</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <p class="swiper-slide-title"><span class="en">NEW</span><br>renault<br>ARKANA e-tech hybrid</p>
+              <p class="swiper-slide-desc">로장주로 첫인상부터 다르다</span></p>
+              <a href="#" class="swiper-slide-link btn light">더 알아보기</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <p class="swiper-slide-title"><span class="en">NEW</span><br>RENAULT QM6</p>
+              <p class="swiper-slide-desc">로장주로 첫인상부터 다르다</span></p>
+              <a href="#" class="swiper-slide-link btn light">더 알아보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next slide__btn next"></div>
+        <div class="swiper-button-prev slide__btn prev"></div>
+        <div class="swiper-pagination"></div>
+        <button class="scroll scroll__down">
+          <p>아래로 스크롤</p>
+          <i class="ri-arrow-down-wide-line"></i>
+        </button>
+      </div>
+    </section>
+    <section class="car">
+      <div class="car__view">
+        <button class="slide__btn prev disable"></button>
+        <button class="slide__btn next"></button>
+        <canvas class="car__view-canvas"></canvas>
+        <div class="car__info">
+          <div class="car__title">
+            <p>NEW ARKANA<br>E-TECH HYBRID</p>
+            <div class="car__btn-wrap">
+              <a href="#" class="btn dark">더 알아보기</a>
+              <a href="#" class="btn light">시승신청</a>
+              <a href="#" class="btn light">내 차 만들기</a>
+            </div>
+          </div>
+          <div class="car__desc">
+            <div class="car__desc-item">
+              <p>복합 연비</p>
+              <p class="val"><span>17.4</span> km/L</p>
+              <p>17" 기준</p>
+            </div>
+            <div class="car__desc-item">
+              <p>배기량</p>
+              <p class="val"><span>1,598</span> cc</p>
+              <p>E-Tech hybrid 1.6 GTe 기준</p>
+            </div>
+            <div class="car__desc-item">
+              <p>시스템 최고 출력</p>
+              <p class="val"><span>135</span> ps</p>
+              <p>가솔린 엔진 : 86ps,<br>전기 모터 : 36kW</p>
+            </div>
+            <div class="car__desc-item">
+              <p>시스템 최대 토크</p>
+              <p class="val"><span>34.9</span> kg·m</p>
+              <p>가솔린 엔진 : 13.9kg.m,<br>전기 모터 : 205Nm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="./js/plugins/swiper.min.js"></script>
+  <script>
+    const swiper = new Swiper("#visualSwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+    });
+  </script>
+</body>
+
+</html>

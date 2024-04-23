@@ -1,0 +1,59 @@
+* {
+  color: #333;
+}
+.view {
+  @include position;
+  width: 100%;
+  background: #666;
+}
+
+.container {
+  width: 100%;
+}
+
+// REMOVABLE CODE START
+.header {
+  @include position(f, 0, null, null, 0);
+  width: 100%;
+  &__wrap {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    width: inherit;
+    height: 170px;
+    padding: 30px 40px;
+  }
+  &__logo {
+    h1 {
+      color: #FFF;
+    }
+  }
+  button {
+    border: none;
+    background: transparent;
+    i {
+      color: #FFF;
+      font-size: 30px;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 25px;
+  min-width: 120px;
+  text-align: center;
+  &.light {
+    background: #FFF;
+    color: #333;
+    border: 1px solid #333;
+  }
+  &.dark {
+    background: #111;
+    color: #FFF;
+    border: 1px solid #111;
+  }
+}

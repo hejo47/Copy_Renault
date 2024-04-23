@@ -1,0 +1,454 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "IBMPlexSansKR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Bold.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "TheJamsil";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil2Light.woff2") format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "TheJamsil";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil3Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "TheJamsil";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil4Medium.woff2") format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "TheJamsil";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "NouvelR";
+  font-weight: 200;
+  src: url("../src/font/NouvelR-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "NouvelR";
+  font-weight: 400;
+  src: url("../src/font/NouvelR-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "NouvelR";
+  font-weight: 600;
+  src: url("../src/font/NouvelR-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff") format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "NouvelR", "TheJamsil";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  letter-spacing: -0.02em;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  color: #181A1B;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+  cursor: pointer;
+}
+
+@keyframes trace-in {
+  0% {
+    width: 0;
+  }
+  to {
+    width: inherit;
+  }
+}
+@keyframes visual-arrow-down {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+* {
+  color: #333;
+}
+
+.view {
+  position: relative;
+  width: 100%;
+  background: #666;
+}
+
+.container {
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header__wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  width: inherit;
+  height: 170px;
+  padding: 30px 40px;
+}
+.header__logo h1 {
+  color: #FFF;
+}
+.header button {
+  border: none;
+  background: transparent;
+}
+.header button i {
+  color: #FFF;
+  font-size: 30px;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 25px;
+  min-width: 120px;
+  text-align: center;
+}
+.btn.light {
+  background: #FFF;
+  color: #333;
+  border: 1px solid #333;
+}
+.btn.dark {
+  background: #111;
+  color: #FFF;
+  border: 1px solid #111;
+}
+
+.visual {
+  width: 100%;
+  height: 100vh;
+}
+.visual .swiper {
+  height: inherit;
+}
+.visual .swiper-slide {
+  position: relative;
+}
+.visual .swiper-slide .container {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0 80px;
+}
+.visual .swiper-slide p {
+  display: block;
+  color: #FFF;
+}
+.visual .swiper-slide-title {
+  font-size: 76px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 0.9em;
+}
+.visual .swiper-slide-title span {
+  line-height: 1;
+  color: #FFF;
+}
+.visual .swiper-slide-title span.ko {
+  font-size: 64px;
+}
+.visual .swiper-slide-title span.en {
+  font-size: 45px;
+}
+.visual .swiper-slide-desc {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.visual .swiper-slide-desc span {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #FFF;
+}
+.visual .swiper-pagination {
+  bottom: 148px !important;
+}
+.visual .swiper-pagination-bullet {
+  position: relative;
+  display: inline-block;
+  width: 292px;
+  height: 1px;
+  background: #FFF;
+  border-radius: 0;
+  opacity: 1;
+  text-transform: uppercase;
+}
+.visual .swiper-pagination-bullet::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  height: 3px;
+  content: "";
+}
+.visual .swiper-pagination-bullet::after {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFF;
+  content: "Renault 한국에서 만나다";
+}
+.visual .swiper-pagination-bullet:nth-of-type(2)::after {
+  content: "NEW ARKANA";
+}
+.visual .swiper-pagination-bullet:nth-of-type(3)::after {
+  content: "NEW QM6";
+}
+.visual .swiper-pagination-bullet-active::before {
+  width: inherit;
+  background: #FFF;
+  animation: 0.5s trace-in backwards;
+}
+
+.slide__btn {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  justify-content: center;
+  align-items: center;
+  width: 32px !important;
+  height: 60px !important;
+  background: #333 !important;
+  color: #FFF !important;
+  border: none;
+  cursor: pointer;
+}
+.slide__btn::after {
+  font-family: swiper-icons;
+  font-size: 16px !important;
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+  content: "";
+}
+.slide__btn.prev {
+  left: 0;
+}
+.slide__btn.prev::after {
+  content: "prev";
+}
+.slide__btn.next {
+  right: 0;
+}
+.slide__btn.next::after {
+  content: "next";
+}
+.slide__btn.disable {
+  opacity: 0.2;
+  pointer-events: none;
+  cursor: default;
+}
+
+.car {
+  height: 100vh;
+  background: #DDD;
+}
+.car__view {
+  position: relative;
+  height: inherit;
+}
+.car__view-canvas {
+  width: 100%;
+  height: inherit;
+}
+.car__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.car__title {
+  position: absolute;
+  top: 80px;
+  left: 120px;
+}
+.car__title p {
+  display: block;
+  font-size: 72px;
+  line-height: 0.9em;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.car__desc {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: absolute;
+  top: 80px;
+  right: 120px;
+  gap: 20px 88px;
+}
+.car__desc-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.car__desc-item:nth-child(1), .car__desc-item:nth-child(2) {
+  border-bottom: 1px solid #BBB;
+  padding-bottom: 20px;
+}
+.car__desc-item p {
+  font-weight: 400;
+}
+.car__desc-item p.val {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 0.9;
+}
+.car__desc-item p.val span {
+  font-size: 56px;
+}
+.car__desc-item p:last-of-type {
+  color: #777;
+  font-size: 15px;
+  margin-top: 4px;
+}
+.car__btn-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  -moz-column-gap: 7px;
+       column-gap: 7px;
+}
+
+.scroll {
+  cursor: pointer;
+  color: #FFF;
+  background: none;
+  transform: translateX(-50%);
+  border: 0;
+  z-index: 1;
+  font-size: 14px;
+}
+.scroll i {
+  display: block;
+  font-size: 23px;
+  margin-top: 10px;
+}
+.scroll__down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+}
+.scroll__down p {
+  color: #FFF;
+}
+.scroll__down i {
+  color: #FFF;
+  animation: 1.2s visual-arrow-down infinite;
+}/*# sourceMappingURL=style.css.map */

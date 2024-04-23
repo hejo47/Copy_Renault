@@ -1,0 +1,23 @@
+@keyframes trace-in {
+  0% {
+    width: 0;
+  }
+
+  to {
+    width: inherit;
+  }
+}
+
+@keyframes visual-arrow-down {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
