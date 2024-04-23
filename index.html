@@ -60,7 +60,7 @@
       <div class="car__view">
         <button class="slide__btn prev disable"></button>
         <button class="slide__btn next"></button>
-        <canvas class="car__view-canvas"></canvas>
+        <div id="car__view-canvas" class="car__view-canvas"></div>
         <div class="car__info">
           <div class="car__title">
             <p>NEW ARKANA<br>E-TECH HYBRID</p>
@@ -97,7 +97,6 @@
     </section>
   </div>
   <script src="./js/plugins/swiper.min.js"></script>
-  <script type="module" src="./node_modules/three/build/three.module.js"></script>
   <script type="module" src="./js/canvas.js"></script>
   <script>
     const swiper = new Swiper("#visualSwiper", {
