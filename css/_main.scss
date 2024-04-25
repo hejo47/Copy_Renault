@@ -1,3 +1,8 @@
+:root {
+  --LoopSliderLength: 1;
+  --LoopSliderGap: 15px;
+}
+
 .visual {
   width: 100%;
   height: 100vh;
@@ -205,6 +210,54 @@
   }
 }
 
+.event {
+  background: #FFF;
+  padding-bottom: 50px;
+  &__slider {
+    @include position;
+    width: 100%;
+    overflow: hidden;
+    &-item {
+      @include position;
+      height: 638px;
+      overflow: hidden;
+      z-index: 0;
+      // min-width: 70%;
+      // height: 683px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .txt_wrap {
+        @include position(a, null, null, 60px, 50%);
+        transform: translateX(-50%);
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+        p {
+          display: block;
+          color: #FFF;
+          font-size: 17px;
+          font-weight: 700;
+          margin-bottom: 30px;
+          margin-top: 20px;
+          line-height: 0.9;
+          &:first-of-type {
+            font-size: 26px;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    &-wrapper {
+      // column-gap: var(--LoopSliderGap);
+      transition: $transition--default;
+    }
+  }
+}
+
 .slide__btn {
   @include flex-row;
   @include position(a, 50%, null, null, null);
@@ -216,6 +269,7 @@
   background: #333 !important;
   color: #FFF !important;
   border: none;
+  margin: 0 !important;
   cursor: pointer;
   &::after {
     font-family: swiper-icons;

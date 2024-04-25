@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="./css/style.css">
   <!-- CDN -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- Plugins -->
   <link rel="stylesheet" href="./css/plugins/swiper.min.css">
+  <link rel="stylesheet" href="./css/plugins/owlcarousel.min.css">
 </head>
 
 <body>
@@ -124,19 +126,72 @@
         </div>
       </a>
     </section>
+    <section class="event">
+      <div class="event__slider">
+        <div id="eventSlider" class="event__slider-wrapper owl-carousel owl-theme">
+          <div class="event__slider-item style__bottom-blur">
+            <img src="https://images.unsplash.com/photo-1603116901496-9a10fe5fd7e5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <div class="txt_wrap">
+              <p>The Originals Renault Museum</p>
+              <p>타임머신을 통해 르노가 지닌 125년의 헤리티지를 살펴보세요</p>
+              <a href="#" class="btn light">더 알아보기</a>
+            </div>
+          </div>
+          <div class="event__slider-item style__bottom-blur">
+            <img src="https://images.unsplash.com/photo-1622653902334-ae450576f128?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <div class="txt_wrap">
+              <p>르노 스타필드 수원</p>
+              <p>새롭게 오픈한 르노 스타필드 수원점을 만나보세요</p>
+              <a href="#" class="btn light">더 알아보기</a>
+            </div>
+          </div>
+          <div class="event__slider-item style__bottom-blur">
+            <img src="https://images.unsplash.com/photo-1614200473756-32eea5b41bde?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <div class="txt_wrap">
+              <p>Renault Seongsu</p>
+              <p>르노의 차량과 라이프스타일, 다양한 이벤트를 경험해보세요</p>
+              <a href="#" class="btn light">더 알아보기</a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="event__slider-btn slide__btn prev"></div>
+        <div class="event__slider-btn slide__btn next"></div>
+        <div class="event__slider-pagination"></div> -->
+      </div>
+    </section>
   </div>
+  <!-- S: Plugins -->
+  <script src="./js/plugins/jquery.min.js"></script>
   <script src="./js/plugins/swiper.min.js"></script>
-  <!-- <script type="module" src="./js/canvas.js"></script> -->
+  <script src="./js/plugins/owlcarousel.min.js"></script>
+  <!-- E: Plugins -->
+  <script src="./js/main.js"></script>
   <script>
-    const swiper = new Swiper("#visualSwiper", {
+    new Swiper("#visualSwiper", {
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".visual .swiper-button-next",
+        prevEl: ".visual .swiper-button-prev",
       },
       pagination: {
         el: ".swiper-pagination",
         clickable: true
       },
+    });
+    $(document).ready(function(){
+      $("#eventSlider").owlCarousel({
+        center: true,
+        items: 1.5,
+        loop: true,
+        margin: 15,
+        nav: true,
+        // responsive: {
+        //   600: {
+        //     items: 4
+        //   }
+        // }
+      });
+      $(".owl-prev").addClass("slide__btn prev");
+      $(".owl-next").addClass("slide__btn next");
     });
   </script>
 </body>
