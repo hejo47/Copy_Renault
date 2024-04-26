@@ -59,10 +59,9 @@
       </div>
     </section>
     <section class="car">
-      <div class="car__view">
-        <button class="slide__btn prev disable"></button>
-        <button class="slide__btn next"></button>
-        <div id="car__view-canvas" class="car__view-canvas"></div>
+      <div id="carSwiper" class="car__view swiper">
+        <!-- <button class="slide__btn prev disable"></button>
+        <button class="slide__btn next"></button> -->
         <div class="car__info">
           <div class="car__title">
             <p>NEW ARKANA<br>E-TECH HYBRID</p>
@@ -75,26 +74,47 @@
           <div class="car__desc">
             <div class="car__desc-item">
               <p>복합 연비</p>
-              <p class="val"><span>17.4</span> km/L</p>
+              <p class="val section1"><span id="section1">17.4</span> km/L</p>
               <p>17" 기준</p>
             </div>
             <div class="car__desc-item">
               <p>배기량</p>
-              <p class="val"><span>1,598</span> cc</p>
+              <p class="val section2"><span id="section2">1,598</span> cc</p>
               <p>E-Tech hybrid 1.6 GTe 기준</p>
             </div>
             <div class="car__desc-item">
               <p>시스템 최고 출력</p>
-              <p class="val"><span>135</span> ps</p>
+              <p class="val section3"><span id="section3">135</span> ps</p>
               <p>가솔린 엔진 : 86ps,<br>전기 모터 : 36kW</p>
             </div>
             <div class="car__desc-item">
               <p>시스템 최대 토크</p>
-              <p class="val"><span>34.9</span> kg·m</p>
+              <p class="val section4"><span id="section4">34.9</span> kg·m</p>
               <p>가솔린 엔진 : 13.9kg.m,<br>전기 모터 : 205Nm</p>
             </div>
           </div>
         </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="container">
+              1
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              2
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              1
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next slide__btn next"></div>
+        <div class="swiper-button-prev slide__btn prev"></div>
+        <!-- <div id="car__view-canvas" class="car__view-canvas"></div> -->
+
       </div>
     </section>
     <section class="info">
@@ -154,9 +174,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="event__slider-btn slide__btn prev"></div>
-        <div class="event__slider-btn slide__btn next"></div>
-        <div class="event__slider-pagination"></div> -->
       </div>
     </section>
   </div>
@@ -164,19 +181,34 @@
   <script src="./js/plugins/jquery.min.js"></script>
   <script src="./js/plugins/swiper.min.js"></script>
   <script src="./js/plugins/owlcarousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@1.9.3"></script>
+  <!-- <script src="./js/plugins/countup-jquery.js"></script> -->
   <!-- E: Plugins -->
   <script src="./js/main.js"></script>
   <script>
-    new Swiper("#visualSwiper", {
+    const visualSwiper = new Swiper("#visualSwiper", {
       navigation: {
         nextEl: ".visual .swiper-button-next",
         prevEl: ".visual .swiper-button-prev",
       },
       pagination: {
-        el: ".swiper-pagination",
+        el: ".visual .swiper-pagination",
         clickable: true
       },
     });
+
+    const carSwiper = new Swiper("#carSwiper", {
+      navigation: {
+        nextEl: ".car .swiper-button-next",
+        prevEl: ".car .swiper-button-prev",
+      },
+      pagination: {
+        el: ".car .swiper-pagination",
+        clickable: true
+      },
+    });
+
+
     $(document).ready(function(){
       $("#eventSlider").owlCarousel({
         center: true,
@@ -190,9 +222,12 @@
         //   }
         // }
       });
+
       $(".owl-prev").addClass("slide__btn prev");
       $(".owl-next").addClass("slide__btn next");
     });
+
+
   </script>
 </body>
 

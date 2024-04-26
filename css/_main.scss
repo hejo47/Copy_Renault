@@ -1,6 +1,5 @@
 :root {
-  --LoopSliderLength: 1;
-  --LoopSliderGap: 15px;
+  --info-count: 0;
 }
 
 .visual {
@@ -130,6 +129,7 @@
     &-item {
       @include flex-column;
       row-gap: 10px;
+      width: 190px;
       &:nth-child(1),
       &:nth-child(2) {
         border-bottom: 1px solid #BBB;
@@ -142,6 +142,7 @@
           font-size: 32px;
           font-weight: 700;
           line-height: 0.9;
+          white-space: nowrap;
           span {
             font-size: 56px;
           }
@@ -256,6 +257,21 @@
       transition: $transition--default;
     }
   }
+  .owl {
+    &-dots {
+      span {
+        width: 8px !important;
+        height: 8px !important;
+        margin: 5px 4px !important;
+      }
+      &.active {
+        span {
+          background: #333 !important;
+        }
+      }
+    }
+  }
+
 }
 
 .slide__btn {
@@ -323,3 +339,4 @@
     }
   }
 }
+

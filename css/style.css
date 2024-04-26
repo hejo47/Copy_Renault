@@ -240,8 +240,7 @@ section {
 }
 
 :root {
-  --LoopSliderLength: 1;
-  --LoopSliderGap: 15px;
+  --info-count: 0;
 }
 
 .visual {
@@ -379,6 +378,7 @@ section {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+  width: 190px;
 }
 .car__desc-item:nth-child(1), .car__desc-item:nth-child(2) {
   border-bottom: 1px solid #BBB;
@@ -392,6 +392,7 @@ section {
   font-size: 32px;
   font-weight: 700;
   line-height: 0.9;
+  white-space: nowrap;
 }
 .car__desc-item p.val span {
   font-size: 56px;
@@ -508,6 +509,14 @@ section {
 }
 .event__slider-wrapper {
   transition: 0.5s linear all;
+}
+.event .owl-dots span {
+  width: 8px !important;
+  height: 8px !important;
+  margin: 5px 4px !important;
+}
+.event .owl-dots.active span {
+  background: #333 !important;
 }
 
 .slide__btn {
