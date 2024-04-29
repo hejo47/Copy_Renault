@@ -1,4 +1,5 @@
 window.onload = () => {
+  // Car Slide
   const itemArray = [
     [
       15.43,
@@ -32,15 +33,6 @@ window.onload = () => {
   let limit = null;
 
   itemListStartHandler(i);
-  // if(carSwiper.swipeDirection == "prev") {
-  //   i++;
-  //   itemListHandler(i);
-  //   counter.start();
-  // } else if(carSwiper.swipeDirection == "prev") {
-  //   i--;
-  //   itemListHandler(i);
-  //   counter.start();
-  // } 
 
   carSwiper.on('slideNextTransitionStart', function () {
     i++;
@@ -68,22 +60,3 @@ window.onload = () => {
     });
   }
 }
-
-
-// let setCount = setInterval(function(){
-//   if ((Math.floor(counter * 10) / 10) >= limit) {
-//     clearInterval(setCount);
-//   } else {
-//     counter += .1;
-//   }
-//   item.querySelector(`.val.section${idx2 + 1} span`).innerText = (Math.floor(counter * 10) / 10);
-// }, 0);
-
-// itemList.forEach(function(item, idx){
-//   let counter = null;
-//   item.querySelector(".val span").style.setProperty("--info-count", 200);
-
-//   counter = item.querySelector(".val span").style.getPropertyValue("--info-count");
-
-//   item.querySelector(".val span").innerText = counter;
-// });
